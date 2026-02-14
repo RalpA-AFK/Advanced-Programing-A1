@@ -15,39 +15,28 @@ public class DateFormats {
     char yearInt2 = 0;
     char yearInt3 = 0;
     char yearInt4 = 0;
-
     int monthValue = 0;
     int dayValue = 0;
     int yearValue = 0;
-    String[] months = {"January", "Febuary", "March", "April","May",
+    String[] months = {"January", "February", "March", "April","May",
     "June","July","August","September","October","November","December"};
 
     for(int i = 0; i < integerDate.length();i++){
         char cycler = integerDate.charAt(i);
-        if(i == 0){
-            monthInt1 = integerDate.charAt(i);
-        }
-        if(i == 1){
-            monthInt2 = integerDate.charAt(i);
-        }
-
-        monthValue = Integer.parseInt(String.valueOf(monthInt1 + monthInt2));
-
-        if(i == 4){ dayInt1 = integerDate.charAt(i);}
-        if(i == 5){dayInt2 = integerDate.charAt(i);}
-
-        dayValue = Integer.parseInt(String.valueOf(dayInt1 +dayInt2));
-
-        if(i == 7){yearInt1 = integerDate.charAt(i);}
-        if(i == 8){yearInt2 = integerDate.charAt(i);}
-        if(i == 9){yearInt3 = integerDate.charAt(i);}
-        if(i == 10){yearInt4 = integerDate.charAt(i);}
-
-        yearValue = Integer.parseInt(String.valueOf(yearInt1 + yearInt2 + yearInt3 + yearInt4));
-
+        if(i == 0){monthInt1 = integerDate.charAt(i);}
+        if(i == 1){monthInt2 = integerDate.charAt(i);}
+        if(i == 3){ dayInt1 = integerDate.charAt(i);}
+        if(i == 4){dayInt2 = integerDate.charAt(i);}
+        if(i == 6){yearInt1 = integerDate.charAt(i);}
+        if(i == 7){yearInt2 = integerDate.charAt(i);}
+        if(i == 8){yearInt3 = integerDate.charAt(i);}
+        if(i == 9){yearInt4 = integerDate.charAt(i);}
     }
+    dayValue = Integer.parseInt("" + dayInt1 + dayInt2);
+    monthValue = Integer.parseInt("" + monthInt1 + monthInt2);
+    yearValue = Integer.parseInt("" +yearInt1 + yearInt2 + yearInt3 + yearInt4);
 
-    System.out.println(months[monthValue-1] + dayValue + ", " + yearValue);
+    System.out.println(months[monthValue-1] +" " + dayValue + ", " + yearValue);
 
     }
 
