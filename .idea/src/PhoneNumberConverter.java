@@ -7,12 +7,15 @@ public class PhoneNumberConverter {
         String phoneNumber = scnr.nextLine();
         scnr.close();
         String[] tokens1 = phoneNumber.split("\\)");
-        String split1 = tokens1[0];
-        String[] tokens2 = split1.split("\\(");
-        String[] token = phoneNumber.split("-");
-        String split2 = token[0];
-        String[] token2 = split2.split(" ");
-        System.out.println("Area code: " + tokens2[1] + "\nNumber: " + token2[1] + token[1] + "\nPhone Number:" + phoneNumber);
+        String split1 = tokens1[0];                   // stores (646
+        String[] tokens2 = split1.split("\\("); // used to get rid of the beginning parenthesis stores 646
+        String[] token = phoneNumber.split("-");// stores (646) 799 and 7977
+        String split2 = token[0];                     // stores (646) 799
+        String[] token2 = split2.split(" ");    // stores (646) and 799
+        System.out.println("Area code: " + tokens2[1] + "\nNumber: " + token2[1] +
+                          token[1] + "\nPhone Number:" + phoneNumber);
+
+        //tokens2[1] = 646 , token2[1] = 799 , token[1] = 7077 , phoneNumber = (646) 799-7977
     }
 }
-//(555) 555-5555
+//Test input : (646) 799-7977

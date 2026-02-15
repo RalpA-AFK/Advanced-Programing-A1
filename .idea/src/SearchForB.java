@@ -29,7 +29,7 @@ public class SearchForB {
                     i++;
                 }
 
-                arrayOfB.add(valueB); //adds the completed word to the array if their is no word it adds nothing
+                arrayOfB.add(valueB); //adds the completed word to the array if there is no word it adds nothing
 
             }
 
